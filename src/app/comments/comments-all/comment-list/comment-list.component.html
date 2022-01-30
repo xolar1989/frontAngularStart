@@ -1,0 +1,24 @@
+<div class="container" style="min-height: 70vh">
+  <div class="d-flex flex-column align-items-center ">
+    <div
+      *ngIf="isLoading"
+      class="spinner-border"
+      role="status"
+      style="width: 70px; height: 70px; margin-top: 30px"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <app-error-connecting *ngIf="errorMessage !== null" [message]="errorMessage.errorMessage"></app-error-connecting>
+  </div>
+  <div class="row row-cols-1
+   row-cols-md-2
+   row-cols-lg-3
+   row-cols-xl-4
+
+">
+    <div *ngFor="let comment of comments">
+      <app-comment-small-item [comment]="comment">
+      </app-comment-small-item>
+    </div>
+  </div>
+</div>

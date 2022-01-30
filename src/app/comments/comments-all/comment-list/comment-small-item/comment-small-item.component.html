@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center" style="margin-bottom: 25px">
+  <div class="card comment-card">
+    <a><i class="bi bi-pencil-square edit-card link-comment"></i></a>
+    <a><i class="bi bi-x-square delete-card del link-comment"></i></a>
+    <img
+      src="{{comment.image}}"
+      class="card-img-top comment-image"
+      alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Comment nr {{comment.id}}</h5>
+      <p class="card-text">{{comment.value}}</p>
+      <a href="#" class="btn btn-primary">View the comment</a>
+    </div>
+  </div>
+</div>

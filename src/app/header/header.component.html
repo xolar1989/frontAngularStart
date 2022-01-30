@@ -1,0 +1,64 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div
+    class="container-fluid justify-content-lg-start"
+  >
+    <div class="nav-item">
+      <a
+        class="navbar-brand link-page"
+        routerLink="/"
+      >ALBICLA</a>
+    </div>
+    <div class="nav-item d-none d-lg-block ">
+      <a
+        class="nav-link link-page"
+        aria-current="page"
+        routerLink="/users"
+        routerLinkActive="active-link-page"
+      >Users</a>
+    </div>
+
+    <div class="nav-item d-lg-block d-none">
+      <a
+        class="nav-link link-page"
+        routerLink="/comments"
+        routerLinkActive="active-link-page"
+      >Comments</a>
+    </div>
+
+
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      appBurger
+      [collapseElements]="hiddenNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+
+</nav>
+<div
+  class="collapse d-lg-none"
+  #collapseElement
+>
+  <div class="bg-dark p-4 d-flex flex-column align-content-center">
+    <div class="element-box d-flex justify-content-center p-3">
+      <p class="text-white h4">
+        <a
+          class="link-page"
+          routerLink="/users"
+          routerLinkActive="active-link-page"
+        >Users</a>
+      </p>
+    </div>
+    <div class="element-box d-flex justify-content-center p-3">
+      <p class="text-white h4">
+        <a
+          class="link-page"
+          routerLink="/comments"
+          routerLinkActive="active-link-page"
+        >Comments</a>
+      </p>
+    </div>
+  </div>
+</div>

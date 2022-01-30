@@ -1,0 +1,14 @@
+.element-box{
+  border-top: 1px solid white;
+}
+
+a.active-link-page{
+  color: pink;
+}
+
+.link-page{
+  cursor: pointer;
+
+  text-decoration: none;
+  color: white;
+}

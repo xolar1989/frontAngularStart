@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {InjectionToken, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
@@ -16,6 +16,11 @@ import {CommentSmallItemComponent} from './comments/comments-all/comment-list/co
 import {CommentModalFormComponent} from './comments/modal-form/comment-modal-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {environment} from "../environments/environment";
+import { ErrorConnectingComponent } from './shared/error-connecting/error-connecting.component';
+
+
+export const API_URL = new InjectionToken<string>('apiUrl')
 
 @NgModule({
   declarations: [
@@ -31,6 +36,7 @@ import {HttpClientModule} from "@angular/common/http";
     CommentSearchComponent,
     CommentSmallItemComponent,
     CommentModalFormComponent,
+    ErrorConnectingComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,9 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: API_URL, useValue: environment.apiUrl}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

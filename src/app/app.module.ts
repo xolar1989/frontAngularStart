@@ -18,6 +18,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import { ErrorConnectingComponent } from './shared/error-connecting/error-connecting.component';
+import { AlertDirective } from './shared/error-connecting/alert.directive';
 
 
 export const API_URL = new InjectionToken<string>('apiUrl')
@@ -37,6 +38,7 @@ export const API_URL = new InjectionToken<string>('apiUrl')
     CommentSmallItemComponent,
     CommentModalFormComponent,
     ErrorConnectingComponent,
+    AlertDirective,
   ],
   imports: [
     BrowserModule,
